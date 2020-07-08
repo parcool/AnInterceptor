@@ -68,7 +68,7 @@
     }
     ……
     ```
-* New `NeedLogonActivity` which need logon before. Add `Interceptor annotation` on this `Activity`.
+* New `NeedLogonActivity` class which need logon before and add `Interceptor annotation` on this class.
     ```
     @Interceptor(interceptors = {LoginInterceptor.class})
     public class NeedLogonActivity extends BaseActivity {
