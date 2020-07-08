@@ -84,6 +84,7 @@
 
     ```
     btn_to_need_logon_activity.setOnClickListener {
+        //Tips: this code must in SubClass which extends BaseActivity    
         startActivity(new Intent(this, NeedLogonActivity.class));
     }
     ```
