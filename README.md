@@ -1,6 +1,6 @@
 [![](https://jitpack.io/v/parcool/AnInterceptor.svg)](https://jitpack.io/#parcool/AnInterceptor)
 # AnInterceptor
-**AnInterceptor** is a interceptor of android that help you intercept a request(Just support `startActivity` now) with a `Callback`.
+**AnInterceptor** is a interceptor of android that help you intercept a route request with a `Callback`.
 
 # Usage
 ---
