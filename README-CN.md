@@ -87,7 +87,7 @@
 
     ```
     btn_to_need_logon_activity.setOnClickListener {
-        //提醒: 这句代码所在位置的类必须要集成自BaseActivity
+        //提醒: 这句代码所在位置的类必须要继承自BaseActivity
         startActivity(new Intent(this, NeedLogonActivity.class));
     }
     ```
