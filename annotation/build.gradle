@@ -1,4 +1,5 @@
 apply plugin: 'java-library'
+group='com.github.parcool'
 
 dependencies {
     implementation project(":internal")

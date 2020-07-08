@@ -1,4 +1,6 @@
 apply plugin: 'java-library'
+group='com.github.parcool'
+
 dependencies {
 }
 sourceCompatibility = JavaVersion.VERSION_1_8
