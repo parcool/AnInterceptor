@@ -25,7 +25,6 @@
     ```
     @Override
     public void startActivityForResult(Intent intent, int requestCode, @Nullable Bundle options) {
-        super.startActivityForResult(intent, requestCode, options);
         if (intent != null) {
             if (options != null && options.getBoolean(AnConstant.REQUIRE_BREAK, false)) {
                 super.startActivityForResult(intent, requestCode, options);
