@@ -108,7 +108,6 @@
 
 * 如果用户登录成功，它会自动跳转到`NeedLogonActivity`
 
-    See gif:
     ![gif](https://github.com/parcool/AnInterceptor/raw/master/gif.gif)
 
 
