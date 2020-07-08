@@ -108,4 +108,4 @@
 
     See [example](https://github.com/parcool/AnInterceptor/tree/master/example)
 # Important!
-This lib is not stable, Don't use it to production environment.I'm very glad to you to make PR to improve it!
+This lib is not stable, Don't use it to production environment.I'm very glad you to make PR to improve it!
