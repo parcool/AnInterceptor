@@ -3,7 +3,7 @@
 **AnInterceptor**是一个带回调处理路由请求的拦截库
 
 # English README
-[README.md](https://github.com/parcool/AnInterceptor/blob/master/README.md)
+[README.md](https://github.com/parcool/AnInterceptor)
 
 # 集成
 ---
@@ -91,7 +91,7 @@
         startActivity(new Intent(this, NeedLogonActivity.class));
     }
     ```
-# 它有什么作用？
+# 它到底有什么用？
 * 不再需要写如下代码.
 
     ```
