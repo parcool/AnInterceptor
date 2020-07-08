@@ -24,7 +24,7 @@
     ```
 
 2. 怎么用？请上示例！
-* 重新`BaseActivity`的`startActivityForResult`方法。
+* 重写`BaseActivity`的`startActivityForResult`方法。
     ```
     @Override
     public void startActivityForResult(Intent intent, int requestCode, @Nullable Bundle options) {
