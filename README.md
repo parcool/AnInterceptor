@@ -87,7 +87,7 @@
         startActivity(new Intent(this, NeedLogonActivity.class));
     }
     ```
-3. What it takes for me? ---Time!
+# What it takes for me? ---Time!
 * We don't need this code any more.
 
     ```
