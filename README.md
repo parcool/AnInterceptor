@@ -103,7 +103,7 @@
 * If user login success it will be auto intent to `NeedLogonActivity`
 
     See gif:
-    ![gif](https://github.com/parcool/AnInterceptor/raw/master/gif.gif){:height="50%" width="50%"}
+    ![gif](https://github.com/parcool/AnInterceptor/raw/master/gif.gif)
 
 * More than one intercetor?
 
