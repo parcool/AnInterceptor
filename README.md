@@ -98,14 +98,15 @@
         startActivity(new Intent(this, LoginActivity.class));
     }
     ```
+* More than one interceptor?
+
+    See [example](https://github.com/parcool/AnInterceptor/tree/master/example)
 
 * If user login success it will be auto intent to `NeedLogonActivity`
 
     See gif:
     ![gif](https://github.com/parcool/AnInterceptor/raw/master/gif.gif)
 
-* More than one intercetor?
 
-    See [example](https://github.com/parcool/AnInterceptor/tree/master/example)
 # Important!
 This lib is not stable, Don't use it to production environment.I'm very glad you to make PR to improve it!
