@@ -7,7 +7,7 @@
 1. Gradle dependency
 
     ```groovy
-    // app module gradle: 
+    // app module gradle
     implementation 'com.github.parcool:AnInterceptor:latestRelease'
     ```
 
