@@ -10,7 +10,8 @@
         android:id="@+id/btn_go"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go TestActivity1"
+        android:text="Go NeeLogonActivity"
+        android:textAllCaps="false"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,6 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Logout"
+        android:textAllCaps="false"
         app:layout_constraintLeft_toRightOf="@+id/btn_go"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ClearUserInfo"
+        android:textAllCaps="false"
         app:layout_constraintLeft_toRightOf="@+id/btn_clear_login"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
