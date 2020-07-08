@@ -83,11 +83,11 @@
         }
     }    
     ```
-* 现在可以调用(`startActivity`)到`TargetActivity`. 比如:
+* 现在可以调用`startActivity`跳转到`TargetActivity`了. 比如:
 
     ```
     btn_to_need_logon_activity.setOnClickListener {
-        //Tips: this code must in SubClass which extends BaseActivity    
+        //提醒: 这句代码所在位置的类必须要集成自BaseActivity
         startActivity(new Intent(this, NeedLogonActivity.class));
     }
     ```
