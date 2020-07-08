@@ -1,21 +1,21 @@
 [![](https://jitpack.io/v/parcool/AnInterceptor.svg)](https://jitpack.io/#parcool/AnInterceptor)
 # AnInterceptor
-**AnInterceptor** is a interceptor of android that help you intercept a route request with a `Callback`.
+**AnInterceptor**是一个带回调处理路由请求的拦截库
 
-# 中文
-[README.md](https://github.com/parcool/AnInterceptor/blob/master/README-CN.md)
+# English README
+[README.md](https://github.com/parcool/AnInterceptor/blob/master/README.md)
 
-# Usage
+# 集成
 ---
-1. Gradle dependency
+1. Gradle依赖
 
     ```groovy
-    // app module gradle
+    // app模块gradle依赖
     implementation 'com.github.parcool:AnInterceptor:latestRelease'
     ```
 
     ```groovy
-    // root gradle 
+    // 根目录gradle依赖
     allprojects {
 		repositories {
 			maven { url 'https://jitpack.io' }
@@ -23,8 +23,8 @@
 	}
     ```
 
-2. How to use? Show me the code!
-* Override the `startActivityForResult` method in your `BaseActivity`.
+2. 怎么用？请上示例！
+* 重新`BaseActivity`的`startActivityForResult`方法。
     ```
     @Override
     public void startActivityForResult(Intent intent, int requestCode, @Nullable Bundle options) {
@@ -36,7 +36,7 @@
         }
     }
     ```
-* New `LoginInterceptor` to intercept the route request.
+* 新建`LoginInterceptor`处理登录的拦截器.
     ```
     public class LoginInterceptor implements HandlerInterceptor {
     
@@ -48,30 +48,30 @@
     
         @Override
         public boolean preHandle() {
-            //return false means handle this, or pass this intercept
+            //返回false：拦截当前请求，返回true：忽略当前请求
             return SPUtils.getInstance().getBoolean("login", false);
         }
     
         @Override
         public void handle() {
-            //if logout we need startActivity to target activity
+            //如果没有登录，那么跳转到LoginActivity
             activityRef.get().startActivity(new Intent(activityRef.get(), LoginActivity.class));
         }
     }
     ```
-* New `LoginActivity` class.
+* 新建`LoginActivity`.
     ```
     ……
     btnLogin.setOnClickListener {
-        //login code such as:  
+        //模拟登录
         SPUtils.getInstance().put("login", true)
         finish()
-        //Add this method to completed this interceptor
+        //在完成以上代码后，调用下面这个方法
         AnInterceptor.trigger()    
     }
     ……
     ```
-* New `NeedLogonActivity` class which need logon before and add `Interceptor annotation` on this class.
+* 新建`NeedLogonActivity`然后再在上面添加`Interceptor annotation`注解.
     ```
     @Interceptor(interceptors = {LoginInterceptor.class})
     public class NeedLogonActivity extends BaseActivity {
@@ -83,7 +83,7 @@
         }
     }    
     ```
-* OK, Now we can handle all request(`startActivity`) which to `TargetActivity`. Such as:
+* 现在可以调用(`startActivity`)到`TargetActivity`. 比如:
 
     ```
     btn_to_need_logon_activity.setOnClickListener {
@@ -91,8 +91,8 @@
         startActivity(new Intent(this, NeedLogonActivity.class));
     }
     ```
-# What it takes for me? ---Time!
-* We don't need this code any more.
+# 它有什么作用？
+* 不再需要写如下代码.
 
     ```
     boolean isLogon = SPUtils.getInstance().getBoolean("login", false);
@@ -102,15 +102,15 @@
         startActivity(new Intent(this, LoginActivity.class));
     }
     ```
-* More than one interceptor?
+* 多个interceptor?
 
-    See [example](https://github.com/parcool/AnInterceptor/tree/master/example)
+    点击 [example](https://github.com/parcool/AnInterceptor/tree/master/example)
 
-* If user login success it will be auto intent to `NeedLogonActivity`
+* 如果用户登录成功，它会自动跳转到`NeedLogonActivity`
 
     See gif:
     ![gif](https://github.com/parcool/AnInterceptor/raw/master/gif.gif)
 
 
-# Important!
-This lib is not stable, Don't use it to production environment.I'm very glad you to make PR to improve it!
+# 重要!
+这个库目前还不稳定，请不要用于生产环境。当然，如果你能提PR那太棒了！👍
