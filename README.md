@@ -1,13 +1,25 @@
 [![](https://jitpack.io/v/parcool/AnInterceptor.svg)](https://jitpack.io/#parcool/AnInterceptor)
 # AnInterceptor
-AnInterceptor is a interceptor of android that help you route to an activity if it need pre-hanlde and get a callback.
+**AnInterceptor** is a interceptor of android that help you route to an activity if it need pre-hanlde and get a callback.
 
 # Usage
 ---
 1. Gradle dependency
+
+    // app module gradle:
     ```
-    implementation 'com.github.parcool:AnInterceptor:0.2.1'
+    implementation 'com.github.parcool:AnInterceptor:latestRelease'
     ```
+    // root gradle
+    ```
+    allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+    ```
+
 2. How to use? Show me the code!
 * Override the `startActivityForResult` method in your `BaseActivity`.
     ```
@@ -91,8 +103,10 @@ AnInterceptor is a interceptor of android that help you route to an activity if 
 * If user login success it will be auto intent to `NeedLogonActivity`
 
     See gif:
-    ![gif](https://github.com/parcool/AnInterceptor/raw/master/gif.gif)
+    ![gif](https://github.com/parcool/AnInterceptor/raw/master/gif.gif){:height="50%" width="50%"}
 
 * More than one intercetor?
 
     See [example](https://github.com/parcool/AnInterceptor/tree/master/example)
+# Important!
+This lib is not stable, Don't use it to production environment.I'm very glad to you to make PR to improve it!
