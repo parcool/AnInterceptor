@@ -110,6 +110,10 @@
 
     ![gif](https://github.com/parcool/AnInterceptor/raw/master/gif.gif)
 
+# Proguard
+```
+-keep class * implements com.parcool.internal.HandlerInterceptor{<init>(*);}
+```
 
 # Important!
 This lib is not stable, Don't use it to production environment.I'm very glad for you make PR to improve it!

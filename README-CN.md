@@ -110,6 +110,10 @@
 
     ![gif](https://github.com/parcool/AnInterceptor/raw/master/gif.gif)
 
+# 混淆
+```
+-keep class * implements com.parcool.internal.HandlerInterceptor{<init>(*);}
+```
 
 # 重要!
 这个库目前还不稳定，请不要用于生产环境。当然，如果你能提PR那太棒了！👍
