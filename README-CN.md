@@ -83,7 +83,7 @@
         }
     }    
     ```
-* 现在可以调用`startActivity`跳转到`TargetActivity`了. 比如:
+* 现在可以调用`startActivity`跳转到`NeedLogonActivity`了. 比如:
 
     ```
     btn_to_need_logon_activity.setOnClickListener {
