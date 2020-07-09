@@ -59,7 +59,7 @@
         }
     }
     ```
-* 新建`LoginActivity`.
+* 在`LoginActivity`里的登录成功的代码后添加`AnInterceptor.trigger()`.
     ```
     ……
     btnLogin.setOnClickListener {
@@ -71,7 +71,7 @@
     }
     ……
     ```
-* 新建`NeedLogonActivity`然后再在上面添加`Interceptor annotation`注解.
+* 在需要登录的`NeedLogonActivity`上面添加`Interceptor annotation`注解.
     ```
     @Interceptor(interceptors = {LoginInterceptor.class})
     public class NeedLogonActivity extends BaseActivity {

@@ -59,7 +59,7 @@
         }
     }
     ```
-* New `LoginActivity` class.
+* Add `AnInterceptor.trigger()` after login success in your `LoginActivity` class.
     ```
     ……
     btnLogin.setOnClickListener {
@@ -71,7 +71,7 @@
     }
     ……
     ```
-* New `NeedLogonActivity` class which need logon before and add `Interceptor annotation` on this class.
+* Add `Interceptor` annotation on `NeedLogonActivity` class which require logon.
     ```
     @Interceptor(interceptors = {LoginInterceptor.class})
     public class NeedLogonActivity extends BaseActivity {
@@ -83,7 +83,7 @@
         }
     }    
     ```
-* OK, Now we can handle all request(`startActivity`) which to `TargetActivity`. Such as:
+* OK, Now we can handle all request(`startActivity`) which to `NeedLogonActivity`. Such as:
 
     ```
     btn_to_need_logon_activity.setOnClickListener {
