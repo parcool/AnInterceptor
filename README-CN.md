@@ -102,7 +102,7 @@
         startActivity(new Intent(this, LoginActivity.class));
     }
     ```
-* 多个interceptor?
+* 同一个`Activity`上添加多个interceptor?
 
     点击 [example](https://github.com/parcool/AnInterceptor/tree/master/example)
 

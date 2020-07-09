@@ -102,7 +102,7 @@
         startActivity(new Intent(this, LoginActivity.class));
     }
     ```
-* More than one interceptor?
+* More than one interceptor on the same `Activity`?
 
     See [example](https://github.com/parcool/AnInterceptor/tree/master/example)
 
